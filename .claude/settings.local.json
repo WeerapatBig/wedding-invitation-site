@@ -21,7 +21,10 @@
       "Bash(awk '/class=\"gallery\"/,/<\\\\/section>/' index.html)",
       "Bash([ -f \"images/opt/$s-800.webp\" ])",
       "Bash(git init *)",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git -c user.email=nongbig@local -c 'user.name=Nong Big' commit -m ' *)",
+      "Bash(git remote *)",
+      "Bash(git push *)"
     ]
   }
 }
