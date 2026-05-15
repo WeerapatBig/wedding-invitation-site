@@ -1,0 +1,12 @@
+{
+  "name": "ice-and-tao-wedding",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "optimize": "node tools/optimize-photos.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}

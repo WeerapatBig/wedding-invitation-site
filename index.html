@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#2e3a30" />
+  <meta name="color-scheme" content="light" />
+  <title>Ice & Tao ♡ A Love Story </title>
+  <meta name="description" content="The wedding of Waranphat (Ice) & Rakpon (Tao). 27 June 2026 · ศาลาประชาคมอ่าวอุดม." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="Ice & Tao — 27 June 2026" />
+  <meta property="og:description" content="ศาลาประชาคมอ่าวอุดม. With family. With love." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Italiana&family=Karla:ital,wght@0,300..600;1,300..600&family=Trirong:ital,wght@0,200..600;1,200..600&family=Sarabun:ital,wght@0,300..600;1,300..600&family=JetBrains+Mono:wght@400..500&display=swap" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="is-sealed">
+
+<!-- ====== ENVELOPE (intro overlay) ====== -->
+<div class="envelope-screen" data-envelope-screen role="dialog" aria-modal="true" aria-label="Wedding invitation envelope">
+
+  <!-- Paper background (bg.png) -->
+  <img class="envelope-screen__bg" src="images/bg.png" alt="" aria-hidden="true" />
+  <div class="envelope-screen__frame" aria-hidden="true"></div>
+
+  <!-- Four floral corners, each layering flower2 (sepia leaves) behind flower1 (cream peony) -->
+  <div class="envelope-screen__corner envelope-screen__corner--tl" aria-hidden="true">
+    <img class="floral floral--leaf" src="images/flower2.png" alt="" />
+    <img class="floral floral--bloom" src="images/flower1.png" alt="" />
+  </div>
+  <div class="envelope-screen__corner envelope-screen__corner--tr" aria-hidden="true">
+    <img class="floral floral--bloom" src="images/flower1.png" alt="" />
+  </div>
+  <div class="envelope-screen__corner envelope-screen__corner--bl" aria-hidden="true">
+    <img class="floral floral--leaf" src="images/flower2.png" alt="" />
+  </div>
+  <div class="envelope-screen__corner envelope-screen__corner--br" aria-hidden="true">
+    <img class="floral floral--leaf" src="images/flower2.png" alt="" />
+    <img class="floral floral--bloom" src="images/flower1.png" alt="" />
+  </div>
+
+  <!-- Envelope (card.png) + wax seal (stamp.png) overlaid on the flap -->
+  <button
+    type="button"
+    class="envelope"
+    data-envelope-open
+    aria-label="Tap to open the wedding invitation"
+  >
+    <img class="envelope__card" src="images/card.png" alt="" />
+    <img class="envelope__seal" src="images/stamp.png" alt="" data-envelope-seal />
+  </button>
+
+  <p class="envelope-screen__hint" aria-hidden="true">
+    <span lang="th">แตะเพื่อเปิดซองจดหมาย</span>
+    <span class="envelope-screen__hint-dot">·</span>
+    <span><em>tap to open</em></span>
+  </p>
+</div>
+
+
+
+<main>
+
+  <!-- ============================================================
+       PHOTO CONFIG — swap photos with a single find-and-replace.
+       Steps:
+         1. Drop the new photo file into  images/Pre-Wedding/
+         2. Run in terminal:               npm run optimize
+            (writes webp variants to      images/opt/<slug>-{800,1200,2400}.webp)
+         3. In your editor's find-replace, change the slug below:
+              HERO  slug =  dsc06989    (appears 4× in the Hero block)
+              STORY slug =  dsc06973    (appears 3× in the Story block)
+            Slug = filename without ".jpg", lowercase.
+       ============================================================ -->
+
+  <!-- ====== HERO ====== -->
+  <header class="hero" aria-labelledby="hero-title">
+    <div class="hero__photo-wrap">
+      <!-- Hero photo. To swap: change every "dsc06989" below to your new slug. -->
+      <img
+        src="images/opt/dsc06989-1200.webp"
+        srcset="
+          images/opt/dsc06989-800.webp 800w,
+          images/opt/dsc06989-1200.webp 1200w,
+          images/opt/dsc06989-2400.webp 2400w"
+        sizes="100vw"
+        alt="Waranphat and Rakpon walking hand-in-hand along the beach"
+        fetchpriority="high"
+        decoding="async"
+      />
+    </div>
+
+    <div class="hero__plate">
+      <p class="hero__kicker">
+        <span lang="en">“A celebration of love, commitment, and a family brought together by destiny.”</span>
+      </p>
+
+      <h1 id="hero-title" class="hero__names">
+        Waranphat 
+        <br>
+        <span class="hero__amp" aria-hidden="true">&amp;</span> 
+        <br>
+        Rakpon
+      </h1>
+      <p class="hero__names-sub">Ice <span class="hero__amp" aria-hidden="true">&amp;</span> Tao</p>
+      <p class="hero__names-th" lang="th">ไอซ์ &amp; เต๋า</p>
+
+      <p class="hero__subtitle">
+        <span lang="th">ขอเรียนเชิญท่านมาร่วมเป็นเกียรติในงานมงคลสมรส</span>
+        <br />
+        <span>invite you to their wedding celebration</span>
+      </p>
+    </div>
+  </header>
+
+
+  <!-- ====== VIDEO (autoplay when scrolled into view, muted + looped) ====== -->
+  <section class="video-section" aria-label="Pre-wedding film">
+    <div class="video-section__frame">
+      <video
+        class="video-section__media"
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="images/opt/dsc06978-1200.webp"
+        aria-hidden="true"
+        data-video-section
+      >
+        <source src="vedio/weddingtao.mp4" type="video/mp4" />
+        <source src="vedio/wedding.mov" type="video/quicktime" />
+        Your browser does not support embedded video.
+      </video>
+    </div>
+  </section>
+
+
+  <!-- ====== COUNTDOWN ====== -->
+  <section class="countdown" aria-labelledby="countdown-title">
+    <header class="section-head">
+      <span class="section-head__pre">The</span>
+      <h2 id="countdown-title" class="section-head__main">Countdown</h2>
+    </header>
+
+    <div class="countdown__grid" data-countdown role="timer" aria-live="polite">
+      <div class="countdown__unit">
+        <span class="countdown__value" data-cd-days>—</span>
+        <span class="countdown__label">days</span>
+      </div>
+      <span class="countdown__sep" aria-hidden="true">:</span>
+      <div class="countdown__unit">
+        <span class="countdown__value" data-cd-hours>—</span>
+        <span class="countdown__label">hours</span>
+      </div>
+      <span class="countdown__sep" aria-hidden="true">:</span>
+      <div class="countdown__unit">
+        <span class="countdown__value" data-cd-minutes>—</span>
+        <span class="countdown__label">minutes</span>
+      </div>
+      <span class="countdown__sep" aria-hidden="true">:</span>
+      <div class="countdown__unit">
+        <span class="countdown__value" data-cd-seconds>—</span>
+        <span class="countdown__label">seconds</span>
+      </div>
+    </div>
+    <p class="countdown__passed" data-countdown-passed hidden>
+      <span lang="th">เราได้แต่งงานแล้ว ขอบคุณที่มาร่วมเป็นส่วนหนึ่งในวันสำคัญ</span>
+      <br />
+      <em>we are wed — thank you for being part of our day.</em>
+    </p>
+  </section>
+
+
+  <!-- ====== DETAILS (Date | Location | Schedule) ====== -->
+  <section class="details" aria-labelledby="details-title">
+    <header class="section-head" data-reveal>
+      <span class="section-head__pre">the</span>
+      <h2 id="details-title" class="section-head__main">Details</h2>
+      <span class="section-head__th" lang="th">รายละเอียดงาน</span>
+    </header>
+
+    <div class="details__grid">
+
+      <!-- DATE & TIME -->
+      <article class="detail-card" data-reveal>
+        <span class="detail-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="16" rx="1"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+            <line x1="8" y1="3" x2="8" y2="7"/>
+            <line x1="16" y1="3" x2="16" y2="7"/>
+          </svg>
+        </span>
+        <h3 class="detail-card__head">
+          <span lang="th">วันและเวลา</span>
+          <span class="detail-card__head-dot" aria-hidden="true">·</span>
+          <span>DATE &amp; TIME</span>
+        </h3>
+        <span class="detail-card__divider" aria-hidden="true"></span>
+        <p class="detail-card__date-main">
+          <span class="detail-card__date-main-month">JUN</span> 27, <span class="detail-card__date-main-year">2026</span>
+        </p>
+        <p class="detail-card__date-sub" lang="th">วันเสาร์ที่ 27 มิถุนายน 2569</p>
+        <p class="detail-card__date-sub">SATURDAY · FROM 07:09</p>
+      </article>
+
+      <!-- LOCATION -->
+      <article class="detail-card" data-reveal>
+        <span class="detail-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </span>
+        <h3 class="detail-card__head">
+          <span lang="th">สถานที่</span>
+          <span class="detail-card__head-dot" aria-hidden="true">·</span>
+          <span>LOCATION</span>
+        </h3>
+        <span class="detail-card__divider" aria-hidden="true"></span>
+        <div class="detail-card__map-thumb">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42710.207318618755!2d100.9022062855869!3d13.11798879535068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3102b9dc66aab801%3A0x324502b197b41df8!2z4Lio4Liy4Lil4Liy4Lib4Lij4Liw4LiK4Liy4LiE4Lih4Lit4LmI4Liy4Lin4Lit4Li44LiU4Lih!5e0!3m2!1sth!2sth!4v1778747253076!5m2!1sth!2sth"
+            title="Map of Ao Udom Community Hall"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <p class="detail-card__venue" lang="th">ศาลาประชาคมอ่าวอุดม</p>
+        <p class="detail-card__venue-en">Ao Udom Community Hall</p>
+        <a
+          href="https://www.google.com/maps?ftid=0x3102b9dc66aab801:0x324502b197b41df8"
+          class="btn-pill"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span lang="th">เปิดแผนที่</span>
+          <span aria-hidden="true">·</span>
+          <span>Open Map</span>
+        </a>
+      </article>
+
+      <!-- SCHEDULE -->
+      <article class="detail-card" data-reveal>
+        <span class="detail-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <polyline points="12 7 12 12 15 14"/>
+          </svg>
+        </span>
+        <h3 class="detail-card__head">
+          <span lang="th">กำหนดการ</span>
+          <span class="detail-card__head-dot" aria-hidden="true">·</span>
+          <span>SCHEDULE</span>
+        </h3>
+        <span class="detail-card__divider" aria-hidden="true"></span>
+        <ol class="detail-card__sched" role="list">
+          <li class="detail-card__sched-row">
+            <span class="detail-card__sched-time"><time>07:09</time></span>
+            <span class="detail-card__sched-name">
+              <span class="detail-card__sched-name-th" lang="th">พิธีสงฆ์</span>
+              <span class="detail-card__sched-name-en">Buddhist monk ceremony</span>
+            </span>
+          </li>
+          <li class="detail-card__sched-row">
+            <span class="detail-card__sched-time"><time>09:09</time></span>
+            <span class="detail-card__sched-name">
+              <span class="detail-card__sched-name-th" lang="th">พิธีแห่ขันหมาก</span>
+              <span class="detail-card__sched-name-en">Khan Maak procession</span>
+            </span>
+          </li>
+          <li class="detail-card__sched-row">
+            <span class="detail-card__sched-time"><time>10:09</time></span>
+            <span class="detail-card__sched-name">
+              <span class="detail-card__sched-name-th" lang="th">ยกน้ำชา</span>
+              <span class="detail-card__sched-name-en">Tea ceremony</span>
+            </span>
+          </li>
+          <li class="detail-card__sched-row">
+            <span class="detail-card__sched-time"><time>12:00</time></span>
+            <span class="detail-card__sched-name">
+              <span class="detail-card__sched-name-th" lang="th">รับประทานอาหาร</span>
+              <span class="detail-card__sched-name-en">Reception lunch</span>
+            </span>
+          </li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- ====== OUR STORY ====== -->
+  <section class="story" aria-labelledby="story-title">
+    <div class="story__inner">
+      <div class="story__text" data-reveal>
+        <header class="section-head" style="text-align: inherit; margin-bottom: 1.4rem;">
+          <span class="section-head__pre">our</span>
+          <h2 id="story-title" class="section-head__main">Story</h2>
+          <span class="section-head__th" lang="th">เรื่องราวของเรา</span>
+        </header>
+        <p class="story__body">
+          <span lang="th">การพบกันโดยบังเอิญในวันวาน เป็นเพียงจุดเริ่มต้นของเรื่องราว... ขอบคุณวันเวลาที่หล่อหลอมเรา และโชคชะตาที่พัดพาเราให้กลับมาเจอกันอีกครั้ง เปลี่ยนสายตาที่เคยเฉียดผ่าน ให้กลายเป็นความรักที่จะคงอยู่ไปชั่วชีวิต</span>
+          <span>A chance encounter years ago was just the prologue. Thankful to the years that shaped us and the destiny that brought us back, transforming a passing glance into a love that will last a lifetime.</span>
+        </p>
+      </div>
+
+      <div class="story__photo" data-reveal>
+        <!-- Story photo. To swap: change every "dsc06973" below to your new slug. -->
+        <img
+          src="images/opt/dsc06973-1200.webp"
+          srcset="images/opt/dsc06973-800.webp 800w, images/opt/dsc06973-1200.webp 1200w"
+          sizes="(min-width: 760px) 30rem, 90vw"
+          alt="Waranphat and Rakpon sharing a tender forehead-touch moment on the beach"
+          loading="lazy" decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== GALLERY ====== -->
+  <section class="gallery" aria-labelledby="gallery-title">
+    <header class="section-head" data-reveal>
+      <span class="section-head__pre">the</span>
+      <h2 id="gallery-title" class="section-head__main">Gallery</h2>
+      <span class="section-head__th" lang="th">บันทึกห้วงเวลา</span>
+    </header>
+
+    <!-- ============================================================
+         GALLERY CONFIG — to add a photo:
+           1. Drop the .jpg into images/Pre-Wedding/
+           2. Run `npm run optimize`  (creates images/opt/<slug>-{800,1200,2400}.webp)
+           3. Copy a <figure> block below and change the slug + alt
+           4. Optionally add a span class for layout:
+                gallery__item--wide    → 2 columns × 1 row  (landscape feature)
+                gallery__item--tall    → 1 column × 2 rows  (portrait feature)
+                gallery__item--big     → 2 columns × 2 rows (large feature)
+              (no class = 1 column × 1 row, square)
+         ============================================================ -->
+    <div class="gallery__grid">
+
+      <figure class="gallery__item gallery__item--big" data-reveal>
+        <img src="images/opt/dsc06969-1200.webp"
+             srcset="images/opt/dsc06969-800.webp 800w, images/opt/dsc06969-1200.webp 1200w"
+             sizes="(min-width: 720px) 30rem, 100vw"
+             alt="Tender cheek-touch portrait"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06971-800.webp"
+             srcset="images/opt/dsc06971-800.webp 800w, images/opt/dsc06971-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Hands forming a heart together"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06962-800.webp"
+             srcset="images/opt/dsc06962-800.webp 800w, images/opt/dsc06962-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Walking hand-in-hand, smiling at each other"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06961-1200.webp"
+             srcset="images/opt/dsc06961-800.webp 800w, images/opt/dsc06961-1200.webp 1200w"
+             sizes="(min-width: 720px) 30rem, 100vw"
+             alt="Walking through the bougainvillea garden"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item gallery__item--tall" data-reveal>
+        <img src="images/opt/dsc06959-1200.webp"
+             srcset="images/opt/dsc06959-800.webp 800w, images/opt/dsc06959-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="A close, intimate embrace by the garden fence"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06966-800.webp"
+             srcset="images/opt/dsc06966-800.webp 800w, images/opt/dsc06966-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Playfully holding each other's faces"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06954-800.webp"
+             srcset="images/opt/dsc06954-800.webp 800w, images/opt/dsc06954-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Laughing together"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06951-1200.webp"
+             srcset="images/opt/dsc06951-800.webp 800w, images/opt/dsc06951-1200.webp 1200w"
+             sizes="(min-width: 720px) 30rem, 100vw"
+             alt="Formal portrait surrounded by bougainvillea"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06960-800.webp"
+             srcset="images/opt/dsc06960-800.webp 800w, images/opt/dsc06960-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Resting cheek on his shoulder, smiling"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06981-800.webp"
+             srcset="images/opt/dsc06981-800.webp 800w, images/opt/dsc06981-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Playful pose by the bouquet"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06975-800.webp"
+             srcset="images/opt/dsc06975-800.webp 800w, images/opt/dsc06975-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="On the beach at golden hour"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06977-800.webp"
+             srcset="images/opt/dsc06977-800.webp 800w, images/opt/dsc06977-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="By the sea, looking out"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item gallery__item--tall" data-reveal>
+        <img src="images/opt/dsc07209-800.webp"
+             srcset="images/opt/dsc07209-800.webp 800w, images/opt/dsc07209-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Holding sparklers at sunset, laughing"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc07171-800.webp"
+             srcset="images/opt/dsc07171-800.webp 800w, images/opt/dsc07171-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="A tender close embrace by the sea"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06974-800.webp"
+             srcset="images/opt/dsc06974-800.webp 800w, images/opt/dsc06974-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Ice and Tao"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc07132-1200.webp"
+             srcset="images/opt/dsc07132-800.webp 800w, images/opt/dsc07132-1200.webp 1200w"
+             sizes="(min-width: 720px) 30rem, 100vw"
+             alt="Twirling together on the shore"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc07159-800.webp"
+             srcset="images/opt/dsc07159-800.webp 800w, images/opt/dsc07159-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Quiet smiles, sparklers in hand"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc07064-800.webp"
+             srcset="images/opt/dsc07064-800.webp 800w, images/opt/dsc07064-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="A backward hug at the shoreline"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item gallery__item--tall" data-reveal>
+        <img src="images/opt/dsc07258-800.webp"
+             srcset="images/opt/dsc07258-800.webp 800w, images/opt/dsc07258-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="A joyful piggyback by the sea"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc07092-800.webp"
+             srcset="images/opt/dsc07092-800.webp 800w, images/opt/dsc07092-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Looking at the sea together"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc07212-1200.webp"
+             srcset="images/opt/dsc07212-800.webp 800w, images/opt/dsc07212-1200.webp 1200w"
+             sizes="(min-width: 720px) 30rem, 100vw"
+             alt="Sparklers and waves at golden hour"
+             loading="lazy" decoding="async" />
+      </figure>
+
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc07180-800.webp"
+             srcset="images/opt/dsc07180-800.webp 800w, images/opt/dsc07180-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Ice and Tao"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06979-800.webp"
+             srcset="images/opt/dsc06979-800.webp 800w, images/opt/dsc06979-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Quiet beach moment"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06980-800.webp"
+             srcset="images/opt/dsc06980-800.webp 800w, images/opt/dsc06980-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Together on the sand"
+             loading="lazy" decoding="async" />
+      </figure>
+
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06976-800.webp"
+             srcset="images/opt/dsc06976-800.webp 800w, images/opt/dsc06976-1200.webp 1200w"
+             sizes="(min-width: 720px) 16rem, 50vw"
+             alt="Hand-in-hand on the beach"
+             loading="lazy" decoding="async" />
+      </figure>
+
+      <figure class="gallery__item" data-reveal>
+        <img src="images/opt/dsc06982-1200.webp"
+             srcset="images/opt/dsc06982-800.webp 800w, images/opt/dsc06982-1200.webp 1200w"
+             sizes="(min-width: 720px) 30rem, 100vw"
+             alt="At the shoreline"
+             loading="lazy" decoding="async" />
+      </figure>
+
+
+    </div>
+  </section>
+
+
+  <!-- ====== DRESS CODE ====== -->
+  <section class="dress" aria-labelledby="dress-title">
+    <div class="dress__card" data-reveal>
+      <span class="dress__icon" aria-hidden="true">
+        <svg viewBox="0 0 90 80" xmlns="http://www.w3.org/2000/svg">
+          <!-- Dress (left, outline only) -->
+          <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round">
+            <path d="M 14 18
+                     C 14 10, 21 10, 24 15
+                     C 26 17, 29 17, 31 15
+                     C 34 10, 41 10, 41 18
+                     L 41 24 L 14 24 Z" />
+            <path d="M 14 24
+                     C 9 38, 5 54, 2 68
+                     L 2 72
+                     C 2 75, 4 76, 7 76
+                     L 47 76
+                     C 50 76, 52 75, 52 72
+                     L 52 68
+                     C 49 54, 45 38, 41 24" />
+          </g>
+          <!-- Suit (right, filled silhouette with V-neck negative space) -->
+          <g fill="currentColor">
+            <!-- Bow tie -->
+            <path d="M 58 12 L 65 16 L 65 20 L 58 24 Z" />
+            <path d="M 78 12 L 71 16 L 71 20 L 78 24 Z" />
+            <rect x="65" y="16" width="6" height="4" />
+            <!-- Left half of jacket -->
+            <path d="M 56 24 L 64 32 L 68 26 L 68 76 L 56 76 Z" />
+            <!-- Right half of jacket -->
+            <path d="M 80 24 L 72 32 L 68 26 L 68 76 L 80 76 Z" />
+          </g>
+        </svg>
+      </span>
+      <h2 id="dress-title" class="dress__title">
+        <span lang="th">การแต่งกาย</span>
+        <span class="detail-card__head-dot" aria-hidden="true">·</span>
+        <span>DRESS CODE</span>
+      </h2>
+
+      <p class="dress__intro">
+        <span lang="th">ขอเรียนเชิญแขกทุกท่านร่วมแต่งกายด้วยโทนสีของงาน</span>
+        <br />
+        <span><em>please join us in the colours of our day</em></span>
+      </p>
+
+      <div class="dress__dots" aria-label="Theme palette">
+        <span class="dress__dot dress__dot--ivory" title="ivory"></span>
+        <span class="dress__dot dress__dot--sand" title="sand"></span>
+        <span class="dress__dot dress__dot--taupe" title="taupe"></span>
+        <span class="dress__dot dress__dot--sepia" title="sepia"></span>
+        <span class="dress__dot dress__dot--cocoa" title="cocoa"></span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====== CLOSING + RSVP ====== -->
+  <section class="closing" aria-labelledby="closing-title">
+    <div class="closing__inner">
+      <header class="section-head" data-reveal>
+        <span class="section-head__pre">with</span>
+        <h2 id="closing-title" class="section-head__main">Love</h2>
+      </header>
+
+      <p class="closing__display" data-reveal>
+        Ice <span class="closing__amp" aria-hidden="true">&amp;</span> Tao
+      </p>
+
+      <div class="closing__sub" data-reveal>
+        <span lang="th">พบกันในวันสำคัญของเรา · 27 มิถุนายน 2569</span>
+        <span class="closing__sub-en">see you on our day · 27 June 2026</span>
+      </div>
+
+      <div class="closing__rsvp" data-reveal>
+        <p class="closing__rsvp-th" lang="th">
+          เพื่อให้เราสามารถวางแผนในการดูแลท่าน ซึ่งเป็นแขกคนสำคัญได้อย่างเต็มที่<br />
+          ขอรบกวนทุกท่านทำแบบตอบรับการเข้าร่วมงานให้เราด้วยนะคะ/ครับ
+        </p>
+        <p class="closing__rsvp-en"><em>Hope to see you at our wedding</em></p>
+      </div>
+
+      <div class="closing__actions" data-reveal>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfffkqYvUohTWl1CoP-ZHs8lBu3ddHPASYcRSL4PWOAobp6_A/viewform"
+          class="btn-pill btn-pill--primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span lang="th">คลิกเพื่อลงทะเบียนเข้าร่วมงาน</span>
+        </a>
+      </div>
+
+      <p class="closing__hash" aria-hidden="true">#IceAndTao2026</p>
+    </div>
+  </section>
+
+
+  <!-- ====== THANK YOU ====== -->
+  <section class="thankyou" aria-labelledby="thankyou-title">
+    <h2 id="thankyou-title" class="visually-hidden">Thank You</h2>
+    <img class="thankyou__title" src="images/thankyou.png" alt="Thank You" data-reveal />
+    <div class="thankyou__photo" data-reveal>
+      <!-- Thank-you photo. To swap: change every "dsc06981" below to your new slug. -->
+      <img
+        src="images/opt/dsc06981-1200.webp"
+        srcset="
+          images/opt/dsc06981-800.webp 800w,
+          images/opt/dsc06981-1200.webp 1200w,
+          images/opt/dsc06981-2400.webp 2400w"
+        sizes="(min-width: 760px) 36rem, 92vw"
+        alt="Waranphat and Rakpon playfully posing together"
+        loading="lazy" decoding="async"
+      />
+    </div>
+  </section>
+
+</main>
+
+
+<!-- ====== FOOTER ====== -->
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p class="site-footer__credit">
+      <span>Design with love by</span>
+      <a class="site-footer__by-name" href="#" rel="noopener noreferrer">Nong Big</a>
+      <span class="site-footer__heart" aria-hidden="true">&lt;3</span>
+    </p>
+  </div>
+</footer>
+
+
+<!-- ====== PETALS (subtle floating particles) ====== -->
+<div class="petals" data-petals aria-hidden="true"></div>
+
+
+<!-- ====== LIGHTBOX (click any gallery photo to view full size) ====== -->
+<div class="lightbox" data-lightbox hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button type="button" class="lightbox__close" data-lightbox-close aria-label="Close">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18"/>
+    </svg>
+  </button>
+  <button type="button" class="lightbox__nav lightbox__nav--prev" data-lightbox-prev aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="15 18 9 12 15 6"/>
+    </svg>
+  </button>
+  <button type="button" class="lightbox__nav lightbox__nav--next" data-lightbox-next aria-label="Next photo">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="9 18 15 12 9 6"/>
+    </svg>
+  </button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" data-lightbox-img alt="" />
+    <figcaption class="lightbox__caption" data-lightbox-caption></figcaption>
+  </figure>
+  <span class="lightbox__counter" data-lightbox-counter aria-hidden="true"></span>
+</div>
+
+
+<!-- ====== AUDIO ELEMENT (hidden — controlled by consent popup + toggle) ======
+     TO CHANGE THE SONG: drop a new .mp3 in /audio/ and update src below. -->
+<audio id="bg-audio" loop preload="metadata" data-bg-audio>
+  <source src="audio/New_West_-_Those_Eyes_CeeNaija.com_.mp3" type="audio/mpeg" />
+</audio>
+
+
+<!-- ====== AUDIO CONSENT POPUP ====== -->
+<div class="consent-modal" data-consent-modal hidden role="dialog" aria-modal="true" aria-labelledby="consent-title">
+  <div class="consent-modal__backdrop" data-consent-no aria-hidden="true"></div>
+  <div class="consent-modal__card">
+    <p class="consent-modal__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13"/>
+        <circle cx="6" cy="18" r="3"/>
+        <circle cx="18" cy="16" r="3"/>
+      </svg>
+    </p>
+    <h2 id="consent-title" class="consent-modal__title">
+      <span lang="th">เปิดเสียงเพลงประกอบเว็บไซต์?</span>
+      <span class="consent-modal__title-en"><em>play background music?</em></span>
+    </h2>
+    <p class="consent-modal__song">
+      <span class="consent-modal__song-title">Those Eyes</span>
+      <span class="consent-modal__song-dot" aria-hidden="true">·</span>
+      <span class="consent-modal__song-artist">New West</span>
+    </p>
+    <div class="consent-modal__actions">
+      <button type="button" class="btn-pill" data-consent-yes>
+        <span lang="th">เปิดเสียง</span>
+        <span aria-hidden="true">·</span>
+        <span>Play</span>
+      </button>
+      <button type="button" class="btn-pill btn-pill--ghost" data-consent-no>
+        <span lang="th">ไม่ขอบคุณ</span>
+        <span aria-hidden="true">·</span>
+        <span>No thanks</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<!-- ====== AUDIO TOGGLE (fixed bottom-right) ====== -->
+<button
+  type="button"
+  class="audio-toggle"
+  aria-pressed="false"
+  aria-label="Toggle ambient music"
+  data-audio-toggle
+  data-state="paused"
+  hidden
+>
+  <span class="audio-toggle__icon" aria-hidden="true">
+    <svg class="audio-toggle__off" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 5L6 9H2v6h4l5 4z"/>
+      <line x1="22" y1="9" x2="16" y2="15"/>
+      <line x1="16" y1="9" x2="22" y2="15"/>
+    </svg>
+    <svg class="audio-toggle__on" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 5L6 9H2v6h4l5 4z"/>
+      <path class="audio-toggle__wave1" d="M15.5 8.5a5 5 0 010 7"/>
+      <path class="audio-toggle__wave2" d="M19 5a9 9 0 010 14"/>
+    </svg>
+  </span>
+  <span class="audio-toggle__text">
+    <span class="audio-toggle__title">Those Eyes</span>
+    <span class="audio-toggle__artist">New West</span>
+  </span>
+</button>
+
+
+<script src="script.js" defer></script>
+</body>
+</html>

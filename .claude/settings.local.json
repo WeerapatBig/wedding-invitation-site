@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node *)",
+      "Bash(npm run *)",
+      "Bash(curl -fsS -o /dev/null -w \"%{http_code}\\\\n\" http://127.0.0.1:4321/)",
+      "Bash(curl -s http://127.0.0.1:4321/ -o /tmp/served.html -w \"HTTP %{http_code}  bytes=%{size_download}  ttfb=%{time_starttransfer}s\\\\n\")",
+      "Bash(npm install *)",
+      "Bash(npx playwright *)",
+      "Bash(curl -s http://127.0.0.1:4321/)",
+      "Bash(awk '{print $5, $NF}')",
+      "Bash(mv public/images images)",
+      "Bash(mv public/audio audio)",
+      "Bash(mv public/vedio vedio)",
+      "Bash(rm -rf src node_modules dist .astro tests tools public)",
+      "Bash(rm -f package.json package-lock.json astro.config.mjs .gitignore)",
+      "Bash(python -m http.server 8000 --bind 127.0.0.1)",
+      "Bash(grep -iE '\\\\.\\(jpg|jpeg\\)$')",
+      "Bash([ -f \"images/Pre-Wedding/$f.jpg\" ])",
+      "Bash([ -f \"images/opt/$f-800.webp\" ])",
+      "Bash(awk '/class=\"gallery\"/,/<\\\\/section>/' index.html)",
+      "Bash([ -f \"images/opt/$s-800.webp\" ])",
+      "Bash(git init *)",
+      "Bash(git add *)"
+    ]
+  }
+}

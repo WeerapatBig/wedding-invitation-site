@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Original source photos — too large for git (1.5 GB).
+# These are the un-optimized originals. The optimized webp variants
+# in images/opt/ are committed and used by the site.
+# Anyone re-running `npm run optimize` will need the originals here.
+images/Pre-Wedding/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Test artifacts (if any)
+tests/screenshots/
+dist/
+.astro/
