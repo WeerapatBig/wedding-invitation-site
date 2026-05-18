@@ -24,7 +24,9 @@
       "Bash(git add *)",
       "Bash(git -c user.email=nongbig@local -c 'user.name=Nong Big' commit -m ' *)",
       "Bash(git remote *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(cp \"images/Pre-Wedding/meta-og-pc.png\" \"images/meta-og.png\")",
+      "Bash(git check-ignore *)"
     ]
   }
 }
